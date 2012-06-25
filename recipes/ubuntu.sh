@@ -45,7 +45,7 @@ sudo $pm -y install \
     libxml2 libffi-dev libyaml-dev \
     libxslt-dev autoconf libc6-dev \
     libreadline6-dev zlib1g-dev libcurl4-openssl-dev \
-    libtool >> $log_file 2>&1
+    libtool python-software-properties >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and mysql..."
@@ -60,4 +60,16 @@ echo "==> done..."
 # Install git-core
 echo -e "\n=> Installing git..."
 sudo $pm -y install git-core >> $log_file 2>&1
+echo "==> done..."
+
+# Install nginx
+sudo add-apt-repository ppa:nginx/stable >> $log_file 2>&1
+sudo $pm update >> $log_file 2>&1
+sudo $pm -y install nginx >> $log_file 2>&1
+echo "==> done..."
+ 
+# Install postgres
+sudo add-apt-repository ppa:pitti/postgresql >> $log_file 2>&1
+sudo $pm update >> $log_file 2>&1
+sudo $pm -y install postgresql libpq-dev postgresql-contrib >> $log_file 2>&1
 echo "==> done..."
