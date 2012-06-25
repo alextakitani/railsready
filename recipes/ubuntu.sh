@@ -73,3 +73,9 @@ sudo add-apt-repository ppa:pitti/postgresql >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install postgresql libpq-dev postgresql-contrib >> $log_file 2>&1
 echo "==> done..."
+
+# Install node
+sudo add-apt-repository ppa:chris-lea/node.js >> $log_file 2>&1
+sudo $pm update >> $log_file 2>&1
+sudo $pm -y install nodejs >> $log_file 2>&1
+echo "==> done..."
