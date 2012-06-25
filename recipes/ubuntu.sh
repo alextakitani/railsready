@@ -45,7 +45,7 @@ sudo $pm -y install \
     libxml2 libffi-dev libyaml-dev \
     libxslt-dev autoconf libc6-dev \
     libreadline6-dev zlib1g-dev libcurl4-openssl-dev \
-    libtool python-software-properties >> $log_file 2>&1
+    libtool python-software-properties p7zip-full p7zip-rar >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and mysql..."
