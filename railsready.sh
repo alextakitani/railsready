@@ -189,6 +189,11 @@ elif [ $whichRuby -eq 2 ] ; then
 fi
 echo "==> done..."
 
+#cria o gemrc e configura para não instalar ri e rdoc
+echo -e "\n=> no ri and no rdoc"
+echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
+echo "==> done..."
+
 echo -e "\n#################################"
 echo    "### Installation is complete! ###"
 echo -e "#################################\n"
