@@ -63,19 +63,35 @@ sudo $pm -y install git-core >> $log_file 2>&1
 echo "==> done..."
 
 # Install nginx
+echo -e "\n=> Installing nginx..."
 sudo add-apt-repository ppa:nginx/stable >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install nginx >> $log_file 2>&1
 echo "==> done..."
  
 # Install postgres
+echo -e "\n=> Installing postgres..."
 sudo add-apt-repository ppa:pitti/postgresql >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install postgresql libpq-dev postgresql-contrib >> $log_file 2>&1
 echo "==> done..."
 
 # Install node
+echo -e "\n=> Installing node..."
 sudo add-apt-repository ppa:chris-lea/node.js >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install nodejs >> $log_file 2>&1
+echo "==> done..."
+
+# Install desenv env
+echo -e "\n=> Installing desenv env..."
+sudo $pm -y install vim zsh ruby-dev rake exuberant-ctags ack-grep >> $log_file 2>&1
+#janus
+curl -Lo- https://bit.ly/janus-bootstrap | bash
+git clone https://github.com/alextakitani/dotjanus ~/.janus 
+#zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | bash
+#dotfiles
+git clone https://github.com/alextakitani/dotfiles ~/dotfiles
+ruby ~/dotfiles/install.rb
 echo "==> done..."
