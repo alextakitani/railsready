@@ -11,7 +11,7 @@
 shopt -s nocaseglob
 set -e
 
-ruby_version="1.9.3"
+ruby_version="1.9.3-p194 --patch falcon"
 ruby_version_string="1.9.3-p194"
 ruby_source_url="http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz"
 ruby_source_tar_name="ruby-1.9.3-p194.tar.gz"
