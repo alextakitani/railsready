@@ -45,7 +45,7 @@ sudo $pm -y install \
     libxml2 libffi-dev libyaml-dev \
     libxslt-dev autoconf libc6-dev \
     libreadline6-dev zlib1g-dev libcurl4-openssl-dev \
-    libtool python-software-properties p7zip-full p7zip-rar >> $log_file 2>&1
+    libtool python-software-properties p7zip-full p7zip-rar libevent-dev libncurses5-dev >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and mysql..."
@@ -89,6 +89,9 @@ sudo $pm -y install vim zsh ruby-dev rake exuberant-ctags ack-grep >> $log_file 
 #janus
 curl -Lo- https://bit.ly/janus-bootstrap | bash
 git clone https://github.com/alextakitani/dotjanus ~/.janus 
+cd ~/.janus
+git submodule update --init
+cd ~
 #zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | bash
 #dotfiles
