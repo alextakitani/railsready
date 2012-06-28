@@ -94,4 +94,8 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 #dotfiles
 git clone https://github.com/alextakitani/dotfiles ~/dotfiles
 ruby ~/dotfiles/install.rb
+#tmux 1.6
+curl -L http://ufpr.dl.sourceforge.net/project/tmux/tmux/tmux-1.6/tmux-1.6.tar.gz  | tar -xvz
+cd tmux-1.6
+./configure && make && sudo make install
 echo "==> done..."
