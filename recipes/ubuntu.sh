@@ -64,28 +64,28 @@ echo "==> done..."
 
 # Install nginx
 echo -e "\n=> Installing nginx..."
-sudo add-apt-repository ppa:nginx/stable >> $log_file 2>&1
+sudo add-apt-repository ppa:nginx/stable -y >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install nginx >> $log_file 2>&1
 echo "==> done..."
  
 # Install postgres
 echo -e "\n=> Installing postgres..."
-sudo add-apt-repository ppa:pitti/postgresql >> $log_file 2>&1
+sudo add-apt-repository ppa:pitti/postgresql -y >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install postgresql libpq-dev postgresql-contrib >> $log_file 2>&1
 echo "==> done..."
 
 # Install node
 echo -e "\n=> Installing node..."
-sudo add-apt-repository ppa:chris-lea/node.js >> $log_file 2>&1
+sudo add-apt-repository ppa:chris-lea/node.js -y >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install nodejs >> $log_file 2>&1
 echo "==> done..."
 
 # Install desenv env
 echo -e "\n=> Installing desenv env..."
-sudo $pm -y install vim zsh ruby-dev rake exuberant-ctags ack-grep >> $log_file 2>&1
+sudo $pm -y install vim zsh ruby-dev rake exuberant-ctags ack-grep tmux >> $log_file 2>&1
 #janus
 curl -Lo- https://bit.ly/janus-bootstrap | bash
 git clone https://github.com/alextakitani/dotjanus ~/.janus 
@@ -98,7 +98,7 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 git clone https://github.com/alextakitani/dotfiles ~/dotfiles
 ruby ~/dotfiles/install.rb
 #tmux 1.6
-curl -L http://ufpr.dl.sourceforge.net/project/tmux/tmux/tmux-1.6/tmux-1.6.tar.gz  | tar -xvz
-cd tmux-1.6
-./configure && make && sudo make install
+#curl -L http://ufpr.dl.sourceforge.net/project/tmux/tmux/tmux-1.6/tmux-1.6.tar.gz  | tar -xvz
+#cd tmux-1.6
+#./configure && make && sudo make install
 echo "==> done..."
