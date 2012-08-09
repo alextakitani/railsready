@@ -40,6 +40,8 @@ if [[ $MACHTYPE = *linux* ]] ; then
   distro_sig=$(cat /etc/issue)
   if [[ $distro_sig =~ ubuntu ]] ; then
     distro="ubuntu"
+  elif [[ $distro_sig =~ mint ]] ; then
+    distro="ubuntu"
   elif [[ $distro_sig =~ centos ]] ; then
     distro="centos"
   fi
