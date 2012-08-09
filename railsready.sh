@@ -38,6 +38,7 @@ echo "#################################"
 #determine the distro
 if [[ $MACHTYPE = *linux* ]] ; then
   distro_sig=$(cat /etc/issue)
+  echo $distro_sig
   if [[ $distro_sig =~ ubuntu ]] ; then
     distro="ubuntu"
   elif [[ $distro_sig =~ mint ]] ; then
