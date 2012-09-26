@@ -63,11 +63,11 @@ sudo $pm -y install git-core >> $log_file 2>&1
 echo "==> done..."
 
 # Install nginx
-echo -e "\n=> Installing nginx..."
-sudo add-apt-repository ppa:nginx/stable -y >> $log_file 2>&1
-sudo $pm update >> $log_file 2>&1
-sudo $pm -y install nginx >> $log_file 2>&1
-echo "==> done..."
+#echo -e "\n=> Installing nginx..."
+#sudo add-apt-repository ppa:nginx/stable -y >> $log_file 2>&1
+#sudo $pm update >> $log_file 2>&1
+#sudo $pm -y install nginx >> $log_file 2>&1
+#echo "==> done..."
  
 # Install postgres
 echo -e "\n=> Installing postgres..."
@@ -87,16 +87,16 @@ echo "==> done..."
 echo -e "\n=> Installing desenv env..."
 sudo $pm -y install vim zsh ruby-dev rake exuberant-ctags ack-grep tmux >> $log_file 2>&1
 #janus
-curl -Lo- https://bit.ly/janus-bootstrap | bash
-git clone https://github.com/alextakitani/dotjanus ~/.janus 
-cd ~/.janus
-git submodule update --init
-cd ~
+#curl -Lo- https://bit.ly/janus-bootstrap | bash
+#git clone https://github.com/alextakitani/dotjanus ~/.janus 
+#cd ~/.janus
+#git submodule update --init
+#cd ~
 #zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | bash
+#curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | bash
 #dotfiles
-git clone https://github.com/alextakitani/dotfiles ~/dotfiles
-ruby ~/dotfiles/install.rb
+#git clone https://github.com/alextakitani/dotfiles ~/dotfiles
+#ruby ~/dotfiles/install.rb
 #tmux 1.6
 #curl -L http://ufpr.dl.sourceforge.net/project/tmux/tmux/tmux-1.6/tmux-1.6.tar.gz  | tar -xvz
 #cd tmux-1.6
