@@ -64,21 +64,21 @@ echo "==> done..."
 
 # Install nginx
 #echo -e "\n=> Installing nginx..."
-#sudo add-apt-repository ppa:nginx/stable -y >> $log_file 2>&1
+#sudo add-apt-repository ppa:nginx/stable >> $log_file 2>&1
 #sudo $pm update >> $log_file 2>&1
 #sudo $pm -y install nginx >> $log_file 2>&1
 #echo "==> done..."
  
 # Install postgres
 echo -e "\n=> Installing postgres..."
-sudo add-apt-repository ppa:pitti/postgresql -y >> $log_file 2>&1
+sudo add-apt-repository ppa:pitti/postgresql >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install postgresql libpq-dev postgresql-contrib >> $log_file 2>&1
 echo "==> done..."
 
 # Install node
 echo -e "\n=> Installing node..."
-sudo add-apt-repository ppa:chris-lea/node.js -y >> $log_file 2>&1
+sudo add-apt-repository ppa:chris-lea/node.js >> $log_file 2>&1
 sudo $pm update >> $log_file 2>&1
 sudo $pm -y install nodejs >> $log_file 2>&1
 echo "==> done..."
